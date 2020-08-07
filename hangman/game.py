@@ -9,7 +9,11 @@ def _get_random_word(list_of_words):
 
 
 def _mask_word(word):
-    pass
+    try:
+        if len(word) > 0:
+            return "*"*len(word)
+    except:
+        raise InvalidWordException(Exception)
 
 
 def _uncover_word(answer_word, masked_word, character):
